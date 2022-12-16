@@ -309,12 +309,12 @@ return [
         ],
         [
             'text' => 'Usuarios',
-            'url'  => 'admin/settings',
+            'url'  => '/users',
             'icon' => 'fas fa-fw fa-users',
         ],
         [
             'text' => 'Clientes',
-            'url'  => 'admin/settings',
+            'url'  => '/clients',
             'icon' => 'fas fa-user-tie',
         ],
         [
@@ -365,7 +365,7 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
