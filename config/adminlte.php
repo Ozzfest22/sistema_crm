@@ -319,7 +319,7 @@ return [
         ],
         [
             'text' => 'Proyectos',
-            'url'  => 'admin/settings',
+            'url'  => '/projects',
             'icon' => 'fas fa-project-diagram',
         ],
         [
@@ -385,7 +385,7 @@ return [
             ],
         ],
         'Select2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -431,6 +431,26 @@ return [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js',
+                ],
+            ],
+        ],
+        'Flatpickr' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/flatpickr',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//npmcdn.com/flatpickr/dist/l10n/es.js',
                 ],
             ],
         ],
