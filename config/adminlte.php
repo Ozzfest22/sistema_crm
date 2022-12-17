@@ -324,7 +324,7 @@ return [
         ],
         [
             'text' => 'Tareas',
-            'url'  => 'admin/settings',
+            'url'  => '/tasks',
             'icon' => 'fas fa-tasks',
         ],        
     ],

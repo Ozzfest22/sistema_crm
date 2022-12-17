@@ -11,7 +11,7 @@ class Task extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillalbe = [
+    protected $fillable = [
         'name',
         'description',
         'deadline',
@@ -20,6 +20,8 @@ class Task extends Model
         'client_id',
         'project_id'
     ];
+
+    public const STATUS = ['Abierto', 'En Progreso', 'Cancelado', 'Completado'];
 
     public function user()
     {
