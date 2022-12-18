@@ -304,7 +304,7 @@ return [
         // Sidebar items:
         [
             'text' => 'Dashboard',
-            'url'  => '/home',
+            'url'  => '/dashboard',
             'icon' => 'fas fa-chart-pie',
         ],
         [

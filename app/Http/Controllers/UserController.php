@@ -39,11 +39,7 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
-        $input = $request->all();
-
-        $input['password'] = Hash::make($input['password']);
-
-        User::create($input);
+        User::create($request->validated());
 
         return redirect()->route('admin.users.index')->with('success', 'Usuario creado exitosamente!');
     }
@@ -79,11 +75,7 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request, User $user)
     {
-        $input = $request->all();
-
-        $input['password'] = Hash::make($input['password']);
-
-        $user->update($input);
+        $user->update($request->validated());
 
         return redirect()->route('admin.users.index')->with('success', 'Usuario editado exitosamente!');
     }

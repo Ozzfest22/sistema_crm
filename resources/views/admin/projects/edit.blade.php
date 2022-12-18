@@ -113,7 +113,8 @@
 <script>
     $(document).ready(function() {
         flatpickr(".date", {
-            "locale": "es"
+            "locale": "es",
+            dateFormat: "d-m-Y"
         });
 
         $('.select2').select2();

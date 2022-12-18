@@ -46,11 +46,11 @@
                                 <td>{{ $client->company_address }}</td>
                                 <td>{{ $client->company_phone_number }}</td>
                                 <td>
-                                    <a href="{{ route('admin.clients.edit', $client->id) }}" class="btn btn-success">Editar</a>
+                                    <a href="{{ route('admin.clients.edit', $client->id) }}" class="btn btn-success"><i class="fa fa-edit"></i></a>
                                     <form action="{{ route('admin.clients.destroy', $client->id) }}" id="delete_form" method="POST" style="display: inline-block;" onsubmit="return confirm('Está seguro de eliminar el registro?')">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                                     </form>
                                 </td>
                             </tr>
@@ -71,7 +71,16 @@
 @section('js')
 <script>
     $(document).ready(function() {
-        $('#client_table').DataTable();
+        $('#client_table').DataTable({
+            language: {
+                url: "https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
+            },
+            columnDefs: [{
+                targets: -1,
+                searching: false,
+                orderable: false
+            }]
+        });
     });
 </script>
 @stop
